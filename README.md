@@ -4,8 +4,7 @@ Welcome to my personal portfolio website, built with **Next.js**, **Tailwind CSS
 
 ## 🚀 Live Site
 
-[https://your-portfolio.vercel.app](https://your-portfolio.vercel.app)  
-_(Replace with your actual link after deploying)_
+[https://ngochuynh-portfolio.vercel.app/]
 
 ## 🛠 Tech Stack
 
