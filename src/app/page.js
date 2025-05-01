@@ -1,103 +1,57 @@
-import Image from "next/image";
+import ExperienceTimeline from "@/components/ExperienceTimeline";
+import ProjectsSection from "@/components/ProjectsSection";
+import TechStackSection from "@/components/TechStackSection";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main>
+      {/* Hero Section */}
+      <section
+        id="intro"
+        className="min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 bg-white dark:bg-black"
+      >
+        <h1 className="text-[clamp(2.5rem,7vw,4rem)] font-bold text-gray-900 dark:text-white mb-4">
+          Hi, I'm Ngoc Huynh
+        </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        <p className="text-[clamp(1.1rem,3vw,1.25rem)] text-gray-600 dark:text-gray-300 mb-4 max-w-xl leading-relaxed">
+          Software Engineer | Full-stack Developer | NLP + AI Explorer
+        </p>
+
+        <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+          Currently seeking full-time opportunities — open to Software Engineer, Full-stack, or AI/NLP roles.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-3 mb-6">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://www.linkedin.com/in/ngoc-huynh/"
             target="_blank"
             rel="noopener noreferrer"
+            className="inline-block bg-blue-300 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-400 transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            🔗 Connect on LinkedIn
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:mnhuynh2@uci.edu"
+            className="inline-block bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-5 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-600 transition"
           >
-            Read our docs
+            ✉️ Hire Me
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* Tech Stack Preview (Compact) */}
+        <TechStackSection compact />
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience">
+        <ExperienceTimeline />
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects">
+        <ProjectsSection />
+      </section>
+    </main>
   );
 }

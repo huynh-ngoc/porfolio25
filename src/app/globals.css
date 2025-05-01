@@ -1,26 +1,91 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ==================================
+   1. Base Styles (Light Mode Default)
+================================== */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1a1a1a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Links */
+a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Buttons */
+button {
+  background-color: #a2d2ff;
+  color: #ffffff;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #74b9ff;
+}
+
+/* Custom Utilities */
+.shadow-soft {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* ==================================
+   2. Dark Mode Overrides (.dark class)
+================================== */
+
+.dark body {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+.dark h1, 
+.dark h2, 
+.dark h3, 
+.dark h4 {
+  color: #f8fafc;
+}
+
+.dark a {
+  color: #f1f5f9;
+}
+
+.dark .bg-white {
+  background-color: #1e293b; /* Slate */
+}
+
+.dark .text-gray-800 {
+  color: #f8fafc;
+}
+
+.dark .text-gray-600 {
+  color: #cbd5e1;
+}
+
+.dark .border-gray-200 {
+  border-color: #334155;
+}
+
+.dark .shadow-soft {
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
 }
