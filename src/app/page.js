@@ -11,7 +11,7 @@ export default function Home() {
         className="min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 bg-white dark:bg-black"
       >
         <h1 className="text-[clamp(2.5rem,7vw,4rem)] font-bold text-gray-900 dark:text-white mb-4">
-          Hi, I'm Ngoc Huynh
+          Hi, I&rsquo;m Ngoc Huynh
         </h1>
 
         <p className="text-[clamp(1.1rem,3vw,1.25rem)] text-gray-600 dark:text-gray-300 mb-4 max-w-xl leading-relaxed">
